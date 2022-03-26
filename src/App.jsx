@@ -5,6 +5,7 @@ import Products from "./components/Products";
 import NavBar from "./components/NavBar";
 import Footer from "./components/Footer";
 import Basket from "./components/Basket";
+import Checkout from "./components/Checkout";
 
 const App = () => {
 
@@ -59,7 +60,7 @@ const App = () => {
     } catch (error) {
       setOrderError(
         (error.data && error.data.error && error.data.error.message) ||
-          "There is an error occurred"
+        "An error occurred"
       );
     }
   };
@@ -77,7 +78,12 @@ const App = () => {
       <div>
         <NavBar basketItems={basketData.total_items} />
         <Routes>
-          <Route path="/" element={<Products products={products} addProduct={addProduct} />}>
+          <Route path="/" element=
+            {
+              <Products
+                products={products}
+                addProduct={addProduct} />
+            }>
           </Route >
           <Route path="/basket" element=
             {
@@ -88,6 +94,12 @@ const App = () => {
                 RemoveItemFromBasket={RemoveItemFromBasket} />
             }>
           </Route>
+          <Route path="checkout" element=
+            {
+              <Checkout
+                basketData={basketData}
+                handleCheckout={handleCheckout} />
+            }></Route>
         </Routes>
         <Footer />
       </div>
