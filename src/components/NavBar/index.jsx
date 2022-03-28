@@ -27,7 +27,7 @@ import {
                 color="inherit"
               >
                 <img
-                  src="https://github.com/DwinaTech/public-images/blob/main/DwinaTech-brand.png?raw=true"
+                  src="https://https://github.com/DwinaTech/public-images/blob/main/DwinaTech-brand.png"
                   alt="DwinaTech logo"
                   height="25px"
                   className="logo"

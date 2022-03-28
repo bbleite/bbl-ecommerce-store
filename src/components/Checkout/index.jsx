@@ -8,7 +8,7 @@ import {
   Typography,
   CircularProgress,
 } from "@material-ui/core";
-import { useHistory } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { commerce } from "../../lib/commerce";
 import { renderRelatedComponent } from "./helpers";
 import "./style.css";
@@ -49,7 +49,7 @@ const Checkout = ({ basketData, orderInfo, orderError, handleCheckout }) => {
     user.shippingSubdivision
   );
 
-  const history = useHistory();
+  const history = useNavigate();
 
   const handleSubmit = (e) => {
     e.preventDefault();

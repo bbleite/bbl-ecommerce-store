@@ -11,6 +11,8 @@ const App = () => {
 
   const [products, setProducts] = useState([]);
   const [basketData, setBasketData] = useState({});
+  const [orderInfo, setOrderInfo] = useState({});
+  const [orderError, setOrderError] = useState("");
 
   const fetchProducts = async () => {
     const response = await commerce.products.list();
@@ -22,10 +24,10 @@ const App = () => {
     setBasketData(response);
   }
 
-  const addProduct = async () => {
+  const addProduct = async (productId, quantity) => {
     const response = await commerce.cart.add(productId, quantity);
     setBasketData(response.cart);
-  }
+  };
 
   const updateProduct = async (productId, quantity) => {
     const response = await commerce.cart.update(productId, { quantity });
@@ -97,6 +99,8 @@ const App = () => {
           <Route path="checkout" element=
             {
               <Checkout
+                orderInfo={orderInfo}
+                orderError={orderError}
                 basketData={basketData}
                 handleCheckout={handleCheckout} />
             }></Route>
