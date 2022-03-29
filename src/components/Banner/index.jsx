@@ -1,5 +1,5 @@
 import { Container, Typography, Button, Grid } from "@material-ui/core";
-import logo from "./My project_ccexpress.png";
+import logo from "./ccexpress.png";
 import "./style.css";
 
 const Banner = () => {
@@ -9,7 +9,7 @@ const Banner = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} sm={6}>
             <Typography className="title" variant="h1">
-              Welcome to DwinaTech Shop
+              Welcome to BBL Store
             </Typography>
             <Button className="shopping-button" href="#products">
               Shopping

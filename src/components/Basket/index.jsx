@@ -14,6 +14,7 @@ const Basket = ({
   RemoveItemFromBasket,
 }) => {
   const [showSpinner, setShowSpinner] = useState(true);
+
   const loading = () => {
     setTimeout(() => {
       setShowSpinner(false);
@@ -28,12 +29,12 @@ const Basket = ({
   return (
     <Container id="basket">
       <Grid container justify="center" spacing={4}>
-        {basketData.line_items.map((item) => {
+        {basketData.line_items.map((product) => {
           return (
-            <Grid key={item.id} item xs={12} sm={6} md={4}>
+            <Grid key={product.id} item xs={12} sm={6} md={4}>
               <CustomCard
                 basket
-                product={item}
+                product={product}
                 updateProduct={updateProduct}
                 RemoveItemFromBasket={RemoveItemFromBasket}
               />

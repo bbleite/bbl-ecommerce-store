@@ -25,7 +25,7 @@ import {
             alt="Contemplative Reptile"
             height="260"
             className="card-image"
-            image={product.media.source}
+            image={product.image?.url}
             title="Contemplative Reptile"
           />
           <CardContent className="content">
