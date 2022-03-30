@@ -3,6 +3,22 @@
     color: #c9d1d9;
     transition: all 0.5s ease-in-out;
   }
+
+  .MuiCard-root.custom-card a {
+    background-color: #21262d;
+    color: #c9d1d9;
+    display: block;
+    position: relative;
+  }
+
+  .MuiCard-root.custom-card a h3 {
+    left: 0;
+    top:-30px;
+    opacity: 0;
+    width: 100%;
+    height: 100%
+    
+  }
   
   .MuiCard-root.custom-card:hover {
     transform: scale(1.05);

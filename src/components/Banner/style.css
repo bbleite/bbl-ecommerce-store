@@ -1,7 +1,7 @@
 .banner {
-  padding-top: 180px;
+  padding-top: 150px;
   width: 100%;
-  height: 55vh;
+  height: 62vh;
   display: flex;
   align-items: center;
   background-color: #21262d;
@@ -18,7 +18,7 @@
 }
 
 .banner .brand img {
-  width: 100%;
+  width: 85%;
 }
 
 .banner .title {
